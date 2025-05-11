@@ -1,0 +1,41 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-primary-color: #4caf4f;
+  --main-secondary-color: #263238;
+  --main-info-color: #2194f3;
+  --main-text-color-warn: #fbc02d;
+  --main-text-color-danger: #e53835;
+  --main-text-color-success: #2e7d31;
+  --custom-button-color: #1acc8d;
+  --neutral-black: #212121;
+  --neutral-grey: #717171;
+  --neutral-d-grey: #4d4d4d;
+  --neutral-white: #fff;
+  --neutral-silver: #f5f7fa;
+}
+
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
