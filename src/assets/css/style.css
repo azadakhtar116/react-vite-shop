@@ -13,7 +13,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
 body{ 
-    background-color:#f9fafa;
+    background-color:#fff;
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-style: normal; 
@@ -28,7 +28,7 @@ a { text-decoration: none; color:#4e4e4e; cursor: pointer !important; outline: 0
 a:hover, a:focus{ text-decoration: none;}
 a:focus {outline: none; }
 img { max-width:100%; height:auto; -webkit-backface-visibility: hidden; }
-p {margin:0 0 22px 0}
+/* p {margin-bottom: 0rem !important;} */
 .table-inputs input {
   background-color: #f4f5f6;
 }
@@ -68,8 +68,8 @@ rdt_ExpanderRow */
 # Preloader
 --------------------------------------------------------------*/
 
-/* :root {
-  --main-primary-color: #4caf4f;
+:root {
+  --main-primary-color: ##0aad0a;
   --main-secondary-color: #263238;
   --main-info-color: #2194f3;
   --main-text-color-warn: #fbc02d;
@@ -81,29 +81,53 @@ rdt_ExpanderRow */
   --neutral-d-grey: #4d4d4d;
   --neutral-white: #fff;
   --neutral-silver: #f5f7fa;
-} */
+}
 
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.head {
+  background-color: #f0f3f2;
+  color: #5c6c75;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 0px;
+}
+.search { padding: 20px 0px;}
+.nav-link { color: #000 !important; font-size: 16px; font-weight: 400; position: relative;}
+.nav-link::before { 
+  content: '';
+  position: absolute;
   bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #0aad0a;
+  visibility: hidden;
+  transition: 0.4s ease-in-out;
 }
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  /* border: 6px solid  var(--custom-button-color); */
-  border-top-color: #d2f9eb;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
+.nav-link:hover::before { width: 100%; visibility: visible;}
+.nav-link:hover, .nav-link:active { color: #0aad0a;}
+.navbar-toggler { border: none !important; font-size: 1.25rem;}
+.navbar-toggler:focus, .btn-close:focus { box-shadow: none !important; outline: none !important;} 
+.navbar .dropdown-menu { border: none;}
+.modal-content { padding: 20px; border-radius: 26px;}
+.filter-div {
+  width: 100%;
+  border: 1px solid #d5dcd5;
+  border-radius: 5px;
+  padding: 10px;
 }
+.filter-div ul li{ 
+  list-style-type: none; /* Remove bullets */
+  padding: 5px; /* Remove padding */
+  margin: 0;
+  color: dimgray;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.filter-div ul li:hover{
+  color: #000;
+  background-color: #f6f6f6;
+  border-radius: 9px;
+  cursor: pointer;
+ }

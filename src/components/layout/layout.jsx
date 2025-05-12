@@ -1,8 +1,8 @@
 // Layout.js
-import Header from './Header';
-import Footer from './Footer';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({children}) => {
     return (
         <div>
             <Header />
