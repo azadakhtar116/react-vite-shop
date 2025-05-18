@@ -7,7 +7,7 @@ import "./assets/css/responsive.css";
 // import bootstrap here
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import PrivateRoute from './utils/PrivateRoute'
+import PrivateRoute from './utility/PrivateRoute'
 
 // import routes here
 import Layout from "./components/layout/layout";
@@ -17,6 +17,7 @@ import Login from "./pages/e-shop/public-pages/auth/login";
 
 {/* Private Routes */}
 import Dashboard from "./pages/e-shop/private-pages/dashboard/index";
+import Form from './pages/e-shop/private-pages/dymaicForm/index'
 
 function App() {
   return (
@@ -28,10 +29,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
-
+           
             {/* Private Route */}
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/form" element={<Form />} />
+             
             </Route>
           </Routes>
         </Layout>

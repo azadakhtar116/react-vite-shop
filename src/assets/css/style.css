@@ -26,7 +26,7 @@ body{
 
 a { text-decoration: none; color:#4e4e4e; cursor: pointer !important; outline: 0; }
 a:hover, a:focus{ text-decoration: none;}
-a:focus {outline: none; }
+input, button,a{ box-shadow: none !important; outline: none !important;} 
 img { max-width:100%; height:auto; -webkit-backface-visibility: hidden; }
 /* p {margin-bottom: 0rem !important;} */
 .table-inputs input {
@@ -100,7 +100,7 @@ rdt_ExpanderRow */
   transform: translateX(-50%);
   width: 100%;
   height: 2px;
-  background-color: #0aad0a;
+  /* background-color: #0aad0a; */
   visibility: hidden;
   transition: 0.4s ease-in-out;
 }
@@ -131,3 +131,7 @@ rdt_ExpanderRow */
   border-radius: 9px;
   cursor: pointer;
  }
+ .cursor-pointer {
+  cursor: pointer;
+}
+.search-input input:focus{box-shadow: none; border-color: var(--main-primary-color) }

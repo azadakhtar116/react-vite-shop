@@ -24,10 +24,10 @@ const NavbarModule = (args) => {
   const handleMouseLeave = () => setOpenIndex(null);
 
   const navBarItems = [
-    { label: "Shop", items: ["shop 1", "shop 2", "shop 3"] },
-    { label: "Store", items: ["Team", "History", "Careers"] },
-    { label: "New Collections", items: ["Web", "Mobile", "AI"] },
-    { label: "Contact", items: ["Email", "Phone", "Social"] },
+    { id: 1, label: "Shop", items: ["shop 1", "shop 2", "shop 3"] },
+    { id: 2, label: "Store", items: ["Team", "History", "Careers"] },
+    { id: 3, label: "New Collections", items: ["Web", "Mobile", "AI"] },
+    { id: 4, label: "Contact", items: ["Email", "Phone", "Social"] },
   ];
 
   return (
@@ -38,11 +38,12 @@ const NavbarModule = (args) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="me-auto" navbar>
               <NavItem className="me-2">
-                <NavLink href="/components/">Home</NavLink>
+                <NavLink href="">Home</NavLink>
               </NavItem>
               {navBarItems?.length > 0
-                ? navBarItems.map((dropdown, index) => (
+                ? navBarItems.map((dropdown, index)=> (
                     <UncontrolledDropdown
+                      key={dropdown?.id}
                       nav
                       inNavbar
                       className="me-2"
@@ -52,7 +53,7 @@ const NavbarModule = (args) => {
                       toggle={() => {}}
                     >
                       <DropdownToggle nav>
-                        {dropdown.label}{" "}
+                        {dropdown.label}
                         {openIndex === index ? (
                           <ChevronUp size={17} style={{ marginLeft: "1px" }} />
                         ) : (

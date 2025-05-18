@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 // Utility Service
-import { getToken, getUser } from '../../utils/AuthService';
+import { getToken, getUser } from '../../utility/AuthService';
 
 const initialState = {
     token: getToken(),

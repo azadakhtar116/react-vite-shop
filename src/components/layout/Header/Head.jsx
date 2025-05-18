@@ -4,8 +4,13 @@ import { Logo } from '../../../assets/images/index'
 
 // third party icon library
 import { Heart, Search, ShoppingBag, User } from 'react-feather';
-import Register from '../../common/Modals/signup-modal'
+import { Link, useNavigate } from "react-router-dom";
 const Head = () => {
+    const navigate = useNavigate()
+
+    const myLogin = ()=> {
+        navigate('/login')
+    }
     return (
         <Fragment>
             <div>
@@ -42,7 +47,7 @@ const Head = () => {
                             <Col lg='3' md='12'>
                                 <div className="d-flex justify-content-end gap-3">
                                     <div ><Heart size={25} className="cursor-pointer"/></div>
-                                    <div><Register /></div>
+                                    <div><User onClick={() => myLogin()} size={25} className="cursor-pointer"  /></div>
                                     <div><ShoppingBag size={25} className="cursor-pointer" /></div>
 
                                 </div>
